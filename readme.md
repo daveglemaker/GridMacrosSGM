@@ -4,7 +4,7 @@
                         SAS® Workload Orchestrator Administration Utility,
                         Version 9.4M6 (build date: Sep 17 2019  09:50:02)
 
-Usage and Setup can be found in SAS Grid and Gsub Macros 2019 SGM powerpoint file
+Usage and Setup can be found in "SAS Grid and Gsub Macros 2019 SGM" powerpoint file
 
 # Macros for the SAS User Role
 - %mygsub %mygsubque - submit a .sas program with sasgsub
