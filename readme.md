@@ -1,7 +1,8 @@
 # SAS Grid Manager CLI and SASGSUB Macros
-           SAS version: SAS 9.4M6 SAS Grid Manager Hotfix E3N001.
+           SAS version: SAS 9.4M6 SAS Grid Manager Hotfix E3N001,E3N001,E3Q016la
+                        E3Y006pt,E3Y008pt
                         SAS® Workload Orchestrator Administration Utility,
-                        (build date: May 17 2019 14:17:45)
+                        Version 9.4M6 (build date: Sep 17 2019  09:50:02)
 
 Usage and Setup can be found in "SAS Grid and Gsub Macros 2019 SGM" powerpoint file
 
