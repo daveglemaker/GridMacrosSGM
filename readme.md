@@ -22,7 +22,7 @@ Usage and Setup can be found in "SAS Grid and Gsub Macros 2019 SGM" powerpoint f
 - %suspend – suspends a grid job
 
 ## Install Steps
-Copy all .sas Files to <SASCOMPUTECONFIGDIR>/Lev1/SASApp/SASEnvironment/SASMacro
+Copy all .sas Files to ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/SASEnvironment/SASMacro
     repeat for each server context as desired, i.e. Server context = SASApp
 
 ### SMC setup
