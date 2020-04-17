@@ -44,10 +44,9 @@ Copy all .sas Files to ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/SASEnvironment/SASM
  1. Expand 'Server Manager'
  2. Expand 'Object Spawner - YourServername
  3. Right Click on each Server and select 'Connect'
- 4. Right Click on each Server and select 'Refresh Spawner' and click 'Yes'
-         Note: clicking 'Refresh' will not work, you must select 'Refresh Spawner'
-    "
- Now all NEW SASApp Sessions will be able to run SAS Grid Macros"
+ 4. Right Click on each Server and select 'Refresh Spawner' and click 'Yes',  Note: clicking 'Refresh' will not work, you must select 'Refresh Spawner'
+    
+ Now all NEW SASApp Sessions will be able to run SAS Grid Macros
 
 ## Disclaimer
 These macros are made available “as is” and disclaims any and all representations
