@@ -22,10 +22,10 @@ Usage and Setup can be found in "SAS Grid and Gsub Macros 2019 SGM" powerpoint f
 - %suspend – suspends a grid job
 
 ## Install Steps
-Copy all .sas Files to ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/SASEnvironment/SASMacro
-    repeat for each server context as desired, i.e. Server context = SASApp
+1. Copy all .sas Files to ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/SASEnvironment/SASMacro  
+           repeat for each server context as desired, i.e. Server context = SASApp
     
-Edit ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/appserver_autoexec_usermods.sas with code below for mygsub and CLI macros to work  
+2. Edit ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/appserver_autoexec_usermods.sas with code below for mygsub and CLI macros to work  
 
            %let gsconfigdir=/Yourconfigdir/Lev1/Applications/SASGridManagerClientUtility/9.4;   
            %let gauconfigdir=/Yourconfigdir/Lev1/Applications/GridAdminUtility/;   
