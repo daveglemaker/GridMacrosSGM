@@ -34,7 +34,7 @@ Usage and Setup can be found in "SAS Grid and Gsub Macros 2019 SGM" powerpoint f
            
 - Be sure to update your sasgsub.cfg to not prompt for password
 - CLI macros assumes .authinfo file exist in user home directory  
--- Sample content of authinfo file: default user sasdemo password {SAS002}1D57933958C580064BD3DCA81A33DFB2
+-- Sample content of .authinfo file: default user sasdemo password {SAS002}1D57933958C580064BD3DCA81A33DFB2
            
 ### SMC setup
 #### Enable xcmd, repeat for each server context desired, i.e. Server context = SASApp
