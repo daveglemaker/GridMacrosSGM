@@ -27,7 +27,7 @@ Usage and Setup can be found in "SAS Grid and Gsub Macros 2019 SGM" powerpoint f
     
 2. Edit ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/appserver_autoexec_usermods.sas with code below for mygsub and CLI macros to work  
 
-           %let gsconfigdir=/Yourconfigdir/Lev1/Applications/SASGridManagerClientUtility/9.4;   
+           %let gsconfigdir=/<strong>Yourconfigdir</strong>/Lev1/Applications/SASGridManagerClientUtility/9.4;   
            %let gauconfigdir=/Yourconfigdir/Lev1/Applications/GridAdminUtility/;   
            %let mhost=sasgridswomasterhostname;   
            %let mport=8901;  
