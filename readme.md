@@ -27,11 +27,11 @@ Copy all .sas Files to ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/SASEnvironment/SASM
     
 Edit ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/appserver_autoexec_usermods.sas with  
 *%let gsconfigdir=/Yourconfigdir/Lev1/Applications/SASGridManagerClientUtility/9.4; /**for mygsub macro, be sure to update your sasgsub.cfg to not prompt for password **/  
-*%let gauconfigdir=/Yourconfigdir/Lev1/Applications/GridAdminUtility/; /* SWO CLI */  
-*%let mhost=sasgridswomasterhostname; /* SWO master host */  
-*%let mport=8901; /* SWO port */  
-*/* macros assumes .authinfo file exist in user home directory, sample content below */  
-*/* default user sasdemo password {SAS002}1D57933958C580064BD3DCA81A33DFB2 */           
+*%let gauconfigdir=/Yourconfigdir/Lev1/Applications/GridAdminUtility/; /** SWO CLI **/  
+*%let mhost=sasgridswomasterhostname; /** SWO master host **/  
+*%let mport=8901; /** SWO port **/  
+*/** macros assumes .authinfo file exist in user home directory, sample content below **/  
+*/** default user sasdemo password {SAS002}1D57933958C580064BD3DCA81A33DFB2 **/           
            
 ### SMC setup
 #### Enable xcmd, repeat for each server context desired, i.e. Server context = SASApp
