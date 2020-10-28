@@ -26,14 +26,13 @@ Copy all .sas Files to ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/SASEnvironment/SASM
     repeat for each server context as desired, i.e. Server context = SASApp
     
 Edit ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/appserver_autoexec_usermods.sas with code below for mygsub and CLI macros to work  
-- Be sure to update your sasgsub.cfg to not prompt for password
-- CLI macros assumes .authinfo file exist in user home directory  
--- Sample content of authinfo file: default user sasdemo password {SAS002}1D57933958C580064BD3DCA81A33DFB2
-
            %let gsconfigdir=/Yourconfigdir/Lev1/Applications/SASGridManagerClientUtility/9.4;   
            %let gauconfigdir=/Yourconfigdir/Lev1/Applications/GridAdminUtility/;   
            %let mhost=sasgridswomasterhostname;   
-           %let mport=8901;         
+           %let mport=8901;  
+- Be sure to update your sasgsub.cfg to not prompt for password
+- CLI macros assumes .authinfo file exist in user home directory  
+-- Sample content of authinfo file: default user sasdemo password {SAS002}1D57933958C580064BD3DCA81A33DFB2
            
 ### SMC setup
 #### Enable xcmd, repeat for each server context desired, i.e. Server context = SASApp
