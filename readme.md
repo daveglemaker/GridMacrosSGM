@@ -30,10 +30,10 @@ Edit ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/appserver_autoexec_usermods.sas with 
 - CLI macros assumes .authinfo file exist in user home directory
 -- Sample content of authinfo file: default user sasdemo password {SAS002}1D57933958C580064BD3DCA81A33DFB2
 
-- *%let gsconfigdir=/Yourconfigdir/Lev1/Applications/SASGridManagerClientUtility/9.4;   
-- *%let gauconfigdir=/Yourconfigdir/Lev1/Applications/GridAdminUtility/;   
-- *%let mhost=sasgridswomasterhostname;   
-- *%let mport=8901;         
+*%let gsconfigdir=/<color=yellow>Yourconfigdir</color>/Lev1/Applications/SASGridManagerClientUtility/9.4;   
+*%let gauconfigdir=/Yourconfigdir/Lev1/Applications/GridAdminUtility/;   
+*%let mhost=sasgridswomasterhostname;   
+*%let mport=8901;         
            
 ### SMC setup
 #### Enable xcmd, repeat for each server context desired, i.e. Server context = SASApp
