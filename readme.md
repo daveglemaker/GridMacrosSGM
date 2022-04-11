@@ -7,7 +7,7 @@
 Usage and Setup can be found in "SAS Grid and Gsub Macros 2019 SGM" powerpoint file
 
 ## Macros for the SAS User Role
-- %mygsub %mygsubque - submit a .sas program with sasgsub the the default queue or a named queue
+- %mygsub %mygsubque - submit a .sas program with sasgsub to the default queue or a named queue
 - %gjobs and %gsstatus – reports on job status
 - %gsresults – move job results to a different directory
 - %gskill – terminate a gsub job
