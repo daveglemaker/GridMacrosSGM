@@ -5,7 +5,8 @@
                         Version 9.4M6 (build date: Sep 17 2019  09:50:02)
 
 Usage and Setup can be found in "SAS Grid and Gsub Macros 2019 SGM" powerpoint file
-#Currently for Linux only, working on Windows version to be ready for end of Mar 2023.
+
+-Currently for Linux only, working on Windows version to be ready for end of Mar 2023.
 
 ## Macros for the SAS User Role
 - %mygsub %mygsubque - submit a .sas program with sasgsub to the default queue or a named queue
