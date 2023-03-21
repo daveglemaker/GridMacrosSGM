@@ -1,5 +1,4 @@
 # SAS Grid Manager CLI and SASGSUB Macros
-#   Currently for Linux only!!! find Windows version at GridMacrosSGMWin
            SAS version: SAS 9.4M6 SAS Grid Manager Hotfix E3N001,E3N001,E3Q016la
                         E3Y006pt,E3Y008pt
                         SAS® Workload Orchestrator Administration Utility,
@@ -7,7 +6,7 @@
 
 Usage and Setup can be found in "SAS Grid and Gsub Macros 2019 SGM" powerpoint file
 
--Currently for Linux only, working on Windows version to be ready for end of Mar 2023.
+-Currently for Linux only, find Windows version at SASGridSGMWin repository.
 
 ## Macros for the SAS User Role
 - %mygsub %mygsubque - submit a .sas program with sasgsub to the default queue or a named queue
