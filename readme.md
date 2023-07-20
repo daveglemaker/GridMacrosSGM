@@ -26,7 +26,7 @@ Usage and Setup can be found in "SAS Grid and Gsub Macros 2019 SGM" powerpoint f
 ## Install Steps
 1. Copy all .sas Files to ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/SASEnvironment/SASMacro  
            repeat for each server context as desired, i.e. Server context = SASApp
-    
+
 2. Edit ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/appserver_autoexec_usermods.sas with code below for mygsub and CLI macros to work  
            change "Yourconfigdir" to your actual configuration directory and "sasgridswomasterhost" to your master host name.
 
@@ -34,11 +34,38 @@ Usage and Setup can be found in "SAS Grid and Gsub Macros 2019 SGM" powerpoint f
            %let gauconfigdir=/Yourconfigdir/Lev1/Applications/GridAdminUtility/;   
            %let mhost=sasgridswomasterhostname;   
            %let mport=8901;  
-           
+
+3. Or commandline setup of SASMacro directory and autoexec file in 3 above (assumes git is installed)
+
+           #Replace with your value of your configuration Directory(LevN location)
+           export CONFIGDIR=<yoursasconfigdir>
+           #copy files from https://github.com/daveglemaker/GridMacrosSGM  to <yoursasconfigdir>/Lev1/SASApp/SASEnvironment/SASMacro:
+           cd $CONFIGDIR/Lev1/SASApp/SASEnvironment/SASMacro
+           git clone https://github.com/daveglemaker/GridMacrosSGM
+           cp $CONFIGDIR/Lev1/SASApp/SASEnvironment/SASMacro/GridMacrosSGM/*.sas $CONFIGDIR/Lev1/SASApp/SASEnvironment/SASMacro
+           #adds the following to /sasinstall/sas/sasconfig/Lev1/SASApp/appserver_autoexec_usermods.sas
+           echo " " >> $CONFIGDIR/Lev1/SASApp/appserver_autoexec_usermods.sas
+           echo "/* GridMacros_BEGIN */" >> $CONFIGDIR/Lev1/SASApp/appserver_autoexec_usermods.sas
+           echo "/* Added by configureGridMacros $USER at `date`*/" >> $CONFIGDIR/Lev1/SASApp/appserver_autoexec_usermods.sas
+           echo "%let gsconfigdir=$CONFIGDIR/Lev1/Applications/SASGridManagerClientUtility/9.4; " >> $CONFIGDIR/Lev1/SASApp/appserver_autoexec_usermods.sas
+           echo "%let gauconfigdir=$CONFIGDIR/Lev1/Applications/GridAdminUtility/; " >> $CONFIGDIR/Lev1/SASApp/appserver_autoexec_usermods.sas
+           echo "%let mhost=$HOSTNAME; " >> $CONFIGDIR/Lev1/SASApp/appserver_autoexec_usermods.sas
+           echo "%let mport=8901; " >> $CONFIGDIR/Lev1/SASApp/appserver_autoexec_usermods.sas
+           echo "/* GridMacros_END */" >> $CONFIGDIR/Lev1/SASApp/appserver_autoexec_usermods.sas
+           echo " " >> $CONFIGDIR/Lev1/SASApp/appserver_autoexec_usermods.sas
+
 - Be sure to update your sasgsub.cfg to not prompt for password
 - CLI macros assumes .authinfo file exist in user home directory  
--- Sample content of .authinfo file: default user sasdemo password {SAS002}1D57933958C580064BD3DCA81A33DFB2
-           
+-- Sample content of .authinfo file:
+  
+           default user sasdemo password {SAS002}1D57933958C580064BD3DCA81A33DFB2
+  
+-- or run on commandline of CLI server(s)
+
+           #Create ~/.authinfo file for SWO cli users. {SAS002}1D57933958C580064BD3DCA81A33DFB2 is encoded pw for “Orion123”, change as needed:
+           echo "default user $USER password {SAS002}1D57933958C580064BD3DCA81A33DFB2" >> /home/$USER/.authinfo
+           chmod 600 /home/$USER/.authinfo
+
 ### SMC setup
 #### Enable xcmd, repeat for each server context desired, i.e. Server context = SASApp
  In SAS Management Console enable xcmd on Logical Workspace Server:
