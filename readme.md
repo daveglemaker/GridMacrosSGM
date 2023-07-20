@@ -35,7 +35,7 @@ Usage and Setup can be found in "SAS Grid and Gsub Macros 2019 SGM" powerpoint f
            %let mhost=sasgridswomasterhostname;   
            %let mport=8901;  
 
-3. Or commandline setup of SASMacro directory and autoexec file in 3 above (assumes git is installed)
+3. Or commandline setup of SASMacro directory and autoexec file in 1 and 2 above, run on master grid host (assumes git is installed)
 
            #Replace with your value of your configuration Directory(LevN location)
            export CONFIGDIR=<yoursasconfigdir>
@@ -54,7 +54,7 @@ Usage and Setup can be found in "SAS Grid and Gsub Macros 2019 SGM" powerpoint f
            echo "/* GridMacros_END */" >> $CONFIGDIR/Lev1/SASApp/appserver_autoexec_usermods.sas
            echo " " >> $CONFIGDIR/Lev1/SASApp/appserver_autoexec_usermods.sas
 
-- Be sure to update your sasgsub.cfg to not prompt for password
+- Be sure to update your sasgsub.cfg to not prompt for password (comment out metauser and metapassword lines)
 - CLI macros assumes .authinfo file exist in user home directory  
 -- Sample content of .authinfo file:
   
